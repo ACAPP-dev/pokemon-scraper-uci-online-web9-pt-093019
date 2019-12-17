@@ -20,7 +20,9 @@ class Pokemon
     #end
   end
 
-  def update
-
+  def find(id)
+    sql = <<-SQL
+      SELECT * FROM pokemon WHERE id = ?
+    SQL
   end
 end
