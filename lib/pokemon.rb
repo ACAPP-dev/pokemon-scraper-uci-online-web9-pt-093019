@@ -24,7 +24,7 @@ class Pokemon
     sql = <<-SQL
       SELECT * FROM pokemon WHERE id = ?
     SQL
-    pokemon_row = db.execute(sql, id)
+    pokemon_row = db.execute(sql, id)[0]
     binding.pry
     new_pokemon = Pokemon.new(:id => pokemon_row[0], :name => pokemon_row[1], :type => pokemon_row[2])
   end
