@@ -26,6 +26,6 @@ class Pokemon
     SQL
     pokemon_row = db.execute(sql, id)[0]
     binding.pry
-    new_pokemon = Pokemon.new(:id => pokemon_row[0], :name => pokemon_row[1], :type => pokemon_row[2])
+    new_pokemon = Pokemon.new(:id => pokemon_row[0], :name => pokemon_row[1], :type => pokemon_row[2], :db => db)
   end
 end
