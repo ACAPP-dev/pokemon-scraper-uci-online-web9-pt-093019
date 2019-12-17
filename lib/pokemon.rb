@@ -16,7 +16,7 @@ class Pokemon
       db.execute(sql, name, type)
       #binding.pry
       #new_id = db.execute("SELECT last_insert_rowid()")[0][0]
-    
+
     #end
   end
 
