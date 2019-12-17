@@ -14,6 +14,7 @@ class Pokemon
         INSERT INTO pokemon(name, type) VALUES(?,?)
       SQL
       db[:conn].execute(sql, name, type)
+      binding.pry
       self.id = db[:conn].execute("SELECT LAST INSERT ID()")[0][0]
       self
     end
