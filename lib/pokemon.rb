@@ -9,6 +9,7 @@ class Pokemon
     #if self.id
     #  self.update
     #else
+    binding.pry
       sql = <<-SQL
         INSERT INTO pokemon(name, type) VALUES(?,?)
       SQL
