@@ -6,9 +6,9 @@ class Pokemon
   end
 
   def self.save(name, type, db)
-    if self.id
-      self.update
-    else
+    #if self.id
+    #  self.update
+    #else
       sql = <<-SQL
         INSERT INTO pokemon(name, type) VALUES(?,?)
       SQL
@@ -16,7 +16,7 @@ class Pokemon
       binding.pry
       new_id = db[:conn].execute("SELECT LAST INSERT ID()")[0][0]
       self
-    end
+    #end
   end
 
   def update
