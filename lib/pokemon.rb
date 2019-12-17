@@ -9,14 +9,14 @@ class Pokemon
     #if self.id
     #  self.update
     #else
-    binding.pry
+    #binding.pry
       sql = <<-SQL
         INSERT INTO pokemon(name, type) VALUES(?,?)
       SQL
       db.execute(sql, name, type)
-      binding.pry
-      new_id = db.execute("SELECT last_insert_rowid()")[0][0]
-      self
+      #binding.pry
+      #new_id = db.execute("SELECT last_insert_rowid()")[0][0]
+    
     #end
   end
 
