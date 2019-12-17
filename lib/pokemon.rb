@@ -20,7 +20,7 @@ class Pokemon
     #end
   end
 
-  def find(id)
+  def self.find(id)
     sql = <<-SQL
       SELECT * FROM pokemon WHERE id = ?
     SQL
